@@ -1,0 +1,66 @@
+Project Name,Package Name,Type Name,Code Smell,Status
+main,com.rentx.businessservices,AreaService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,BooksService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,CategoryService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,ElectronicGadgetService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,EmailService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,FurnitureService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,ImageService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices,KitchenApplianceService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices.exceptions,AppException,Unutilized Abstraction,False Positive
+main,com.rentx.businessservices.interfaces,IPurchaseService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices.interfaces,IReviewService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices.interfaces,IUserProfileService,Unutilized Abstraction,Fixed
+main,com.rentx.businessservices.interfaces,IWishlistService,Unutilized Abstraction,Fixed
+main,com.rentx.config,ApiResponse,Unnecessary Abstraction,False Positive: Entity class
+main,com.rentx.config,ApiResponse,Unutilized Abstraction,False Positive
+main,com.rentx.config,Constant,Unnecessary Abstraction,Constants Class
+main,com.rentx.config,Constant,Deficient Encapsulation,Constants Class: Have to expose all the constant values
+main,com.rentx.config,JwtAuthFilter,Unutilized Abstraction,False positive: it is used (Authentication related class)
+main,com.rentx.config,PasswordConfig,Unutilized Abstraction,False positive: it is used (Authentication related class)
+main,com.rentx.config,RestExceptionHandler,Unutilized Abstraction,False positive: it is used (Authentication related class)
+main,com.rentx.config,SecurityConfig,Unutilized Abstraction,False positive: it is used (Authentication related class)
+main,com.rentx.config,WebConfig,Unutilized Abstraction,False positive: it is used (Authentication related class)
+main,com.rentx.controller,AdvertisementController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,AreaController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,AuthController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,BooksController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,CategoryController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,ElectronicGadgetController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,FurnitureController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,HomeController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,ImageController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,KitchenApplianceController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,MessagesController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,PurchaseController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,ReviewController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,ServerHealthController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,UserController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,UserProfileController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.controller,WishlistController,Unutilized Abstraction,False positive: Controller class will be utilized when invoked
+main,com.rentx.dataaccess,AdvertisementDAO,Unutilized Abstraction,Fixed
+main,com.rentx.dataaccess,ImageDAO,Unutilized Abstraction,Fixed
+main,com.rentx.dataaccess,ProductDAO,Unutilized Abstraction,Fixed
+main,com.rentx.dataaccess,UserDAO,Unutilized Abstraction,Fixed
+main,com.rentx.dataaccess.interfaces,IAdvertisementDAO,Unutilized Abstraction,Fixed
+main,com.rentx.dataaccess.repository,PurchaseRepository,Unnecessary Abstraction,Fixed
+main,com.rentx.dtos,AdvertisementDto,Broken Modularization,False Positive: Dto class
+main,com.rentx.dtos,AreaDto,Unnecessary Abstraction,False Positive: Dto class
+main,com.rentx.dtos,AreaDto,Broken Modularization,False Positive: Dto class
+main,com.rentx.dtos,CategoryDto,Unnecessary Abstraction,False Positive: Dto class
+main,com.rentx.dtos,ImageDto,Unnecessary Abstraction,False Positive: Dto class
+main,com.rentx.dtos,NewPasswordDto,Unnecessary Abstraction,False Positive: Dto class
+main,com.rentx.dtos,NewPasswordDto,Unutilized Abstraction,False Positive: Dto class
+main,com.rentx.dtos,ProductDto,Broken Modularization,False Positive: Dto class
+main,com.rentx.dtos,ResetDto,Unnecessary Abstraction,False Positive: Dto class
+main,com.rentx.dtos,ResetDto,Unutilized Abstraction,False Positive: Dto class
+main,com.rentx.dtos,UserDto,Broken Modularization,False Positive: Dto class
+main,com.rentx.entities,Advertisement,Broken Modularization,False Positive: Entity class
+main,com.rentx.entities,Area,Unnecessary Abstraction,False Positive: Entity class
+main,com.rentx.entities,Area,Broken Modularization,False Positive: Entity class
+main,com.rentx.entities,Category,Unnecessary Abstraction,False Positive: Entity class
+main,com.rentx.entities,Product,Broken Modularization,False Positive: Entity class
+main,com.rentx.entities,ProductReal,Broken Modularization,False Positive: Entity class
+main,com.rentx.entities,User,Broken Modularization,False Positive: Entity class
+main,com.rentx.entities,Wishlist,Unnecessary Abstraction,False Positive: Entity class
+main,com.rentx.utils,ResponseUtils,Unutilized Abstraction,Fixed

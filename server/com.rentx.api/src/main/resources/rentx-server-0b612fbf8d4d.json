@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "rentx-server",
+  "private_key_id": "0b612fbf8d4d07591d6321a19c5dab3d872b23ce",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDZZHaUAcVjaCmT\noA3ukWeqw5KTI0HfVoOZAtOL2PyWxKiWsWU+z/HRoaRZbXQ5Pu5aqjC+h2P4VqKi\nPcWlfeTkwO8AH/MmOMZmyKUwFtsfDFGKJBjjSlrNoqriodKHsLEx1Q1lniZJ4clG\nMAdHTJrvny4Prhcb7oQVccKAEeZMzhZcFjaG7Zx+07/PihdX47AkDMQm48BY7GCa\nhES74U+mATZAVMozMoM7/UIRlGQixj6rFC05J/HbtuzEEn8t71NXAS0GcHPxjXJO\nbLCGm7k2AwITZsX3fiItqt/sUkrk5CShTwyE3atx2r0RbeS9SPJGFYZR7zMPJZrC\nI8rxx2knAgMBAAECggEAGkBheVoFZg2sB6GqTQbOB/b5+j6ls7yUw6NtvFOFnQc+\nfIQLf9xIjVIBsLLg+BC7Y8Ntg3SCA/kiRolDFsrvGxiZQ+CX0iPFAaB1IiuAZm1s\nY0wcnUXbVT2xeRClhbE2lJfvuDey0/UqAwnFtzxu8US9oTMao0rYNGa6YBDJSLjZ\nRK8RMkylLwuurh5M4ALWiehykP4U9A4vnRc4ypiUKIuJ8x5ZRdAI3s1MMlro1QRw\nGX5QF7bFuy6sXU3VAFKc188OLfV+Dl+kOFraAbsateAteR9SQpaM4btFv6PUF5UV\ni/uCA44APiTD+I/dU/781LC0blvzjNJXJLe/RM+8UQKBgQDz1UuJcOsZaBB7W3Xc\nxHgigVNpzgtNLfoYjp71coFIMbJdoh3MILn6ZAzg+RITDIYUyRrSWpBecfkWPKxl\nHtBrI+KDFLUc9ooeOk5n13YMZxY9KnXj409ERkYiAvlpQW6PuTQS/oaUXNPxJo4F\nuZcOawvzYaFaJAu043TACSpktQKBgQDkPWqK4e9hASBfgKm1OnkfHJQSrr15PqRE\n9uhKHeuNiB1WjxEA6d1O2WvqU3m9EOePMrNeKwi/BO7Tv2sz7qf1g2j/07lE3sA4\nUwhGmFainpGR0rmGFbWlBwZNoqYSX45CQYuLghHfX+lKrXvbAgCpk04datMwCcU2\ncjmvedJ76wKBgDyGmbWIPhOUbWLxlRQ0AM4v5BDDgLKr0wT9gh/TSJwvGeN8NoFR\nLlklNL0zlnT8Ctxl/y5wJJ4NFJOcg/6l43507ekz3rFN0YMnXgcQyNDTVgXg4Fqt\nNiPwfcA7lMW35EXw5yg/3hA96q5Vr7NkGkcN8216sp65i95fB8AThl5xAoGBAINK\nfPYlH3E6l6e4OGdCmpf19YuFrwKGsTHmohq4eV5x1QaMx6gx3xdTZItnt1i11638\n6UcbFC3lpYhyzTUTbNSC4ix/W0ytof8EbHdHfFaRRoWOpR/nbxTeJJcWH9fj1c5x\nK9d1W9iVsHo/r0Z9MWpajQ3I/HDeve4i6OHy/sw/AoGAA297cWex9v6YRMKJjYQK\nOLnDZfClAIYYzy/W69LULpj9/Z5E33p2IEs8tKQo3O1t4FE8TeOgWeY8JSmAz9vl\n+T33or1/Y4UFq0UA87d787QTU+tg61XTzi/E+CAN4F8sL4yX+NiDoeL7phty+nFk\nmkJtwt25GjJLeQbpSTqfhmg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "rentx-image-service@rentx-server.iam.gserviceaccount.com",
+  "client_id": "105609348334084397767",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rentx-image-service%40rentx-server.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

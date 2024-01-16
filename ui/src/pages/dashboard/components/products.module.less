@@ -1,0 +1,31 @@
+.products {
+    @apply flex;
+    @apply gap-10;
+    @apply my-10;
+    @apply flex-wrap;
+}
+
+.product {
+    @apply shadow-light;
+    @apply rounded-lg;
+    @apply w-3/12;
+    @apply cursor-pointer;
+    @apply hover:shadow-subtle;
+    @apply transition-all;
+    
+    img {
+        height: 156px;
+        object-fit: cover;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.product-details {
+    @apply py-5;
+    @apply px-4;
+
+    * {
+        @apply block;
+    }
+}

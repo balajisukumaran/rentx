@@ -1,0 +1,111 @@
+stages:
+  - build
+  - code-quality-check
+  - test  
+  - deploy
+  - run
+
+before_script:
+  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  - source ~/.nvm/nvm.sh
+  - nvm install 20.8.1
+  - nvm use 20.8.1
+
+maven-build: 
+  stage: build
+  image: maven:3.8.3-openjdk-17
+  script:
+    - echo "Compiling the backend code..."
+    - cd server/com.rentx.api
+    - mvn clean package -DskipTests
+    - echo "Backend code build completed."
+  artifacts:
+    paths:
+      - server/com.rentx.api/target/*.jar
+  
+react-build:
+  stage: build
+  script:
+    - echo "Compiling the frontend code."
+    - cd ui
+    - node -v
+    - npm install -g pnpm
+    - pnpm install
+    - pnpm i -f
+    - pnpm build
+    - echo "frontend code build is completed."
+  artifacts:
+    paths:
+      - ui/build/*
+  
+maven-test: 
+  stage: test 
+  image: maven:3.8.3-openjdk-17
+  script:
+    - echo "Running backend test cases..."
+    - cd server/com.rentx.api
+    - mvn verify
+    - echo "Backend Test Cases completed"
+
+react-test:
+  stage: test
+  script:
+    - echo "Running frontend test cases..."
+    - cd ui/
+    - node -v
+    - npm install -g pnpm
+    - pnpm install
+    - pnpm i -f
+    - pnpm run test
+    - echo "Frotend test cases completed"
+
+maven-deploy: 
+  stage: deploy 
+  script:
+    - echo "Deploying application..."
+    - echo "${CI_COMMIT_SHORT_SHA}.zip target"
+    - echo ""${DEPLOY_SSH_KEY}" ${CI_COMMIT_SHORT_SHA}.zip "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHORT_SHA}.zip""
+    - chmod og-rwx ${DEPLOY_SSH_KEY}
+    - cd server/com.rentx.api
+    - zip -r ${CI_COMMIT_SHORT_SHA}.zip ./target/*jar
+    - scp -r -o StrictHostKeyChecking=no -i "${DEPLOY_SSH_KEY}" ${CI_COMMIT_SHORT_SHA}.zip "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/${CI_COMMIT_SHORT_SHA}-api.zip"
+    - echo "Application successfully deployed."
+  only:
+    - development
+  dependencies:
+    - maven-build
+
+react-lint:
+  stage: code-quality-check
+  script:
+    - echo "Frontend code quality check..."
+    - cd ui/
+    - node -v
+    - npm install -g pnpm
+    - pnpm install
+    - pnpm i -f
+    - pnpm run lint
+    - echo "Frontend code quality check passed"
+
+react-deploy:
+  stage: deploy 
+  script:
+    - echo "Deploying application..."
+    - echo "${CI_COMMIT_SHORT_SHA}.zip build"
+    - echo ""${DEPLOY_SSH_KEY}" ${CI_COMMIT_SHORT_SHA}.zip "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}-${CI_COMMIT_SHORT_SHA}.zip""
+    - cd ui
+    - chmod og-rwx ${DEPLOY_SSH_KEY}    
+    - zip -r ${CI_COMMIT_SHORT_SHA}.zip ./build/*
+    - scp -r -o StrictHostKeyChecking=no -i "${DEPLOY_SSH_KEY}" ${CI_COMMIT_SHORT_SHA}.zip "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_DIR}/${CI_COMMIT_SHORT_SHA}-react.zip"
+    - echo "Application successfully deployed."
+  only:
+    - development
+  dependencies:
+    - react-build
+
+run-application:
+  stage: run
+  script:
+    - chmod og-rwx ${DEPLOY_SSH_KEY}
+    - ssh -o StrictHostKeyChecking=no -i "${DEPLOY_SSH_KEY}" student@csci5308vm8.research.cs.dal.ca "chmod +x deployment.sh && ./deployment.sh"
+    - echo "Application running successfully"

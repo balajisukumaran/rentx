@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap&.css);
+
+@layer base {
+    html, .ant-typography {
+        font-family: 'Inter', sans-serif;
+    }
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 36px;
+}
+
+h5 {
+    font-size: 32px;
+}
+
+h6 {
+    font-size: 24px;
+}
+
+span, p {
+    font-size: 16px;
+}
+
+.ant-input {
+    @apply shadow-light;
+    @apply p-4;
+}
+
+.ant-btn {
+    @apply h-fit;
+    @apply w-fit;
+    @apply py-3;
+    @apply px-8;
+}
+
+.ant-btn-primary {
+    @apply text-white;
+    @apply bg-blue;
+
+    &:hover {
+        @apply bg-blue !important;
+    }
+}
+
+.ant-btn-primary-inverse {
+    @apply text-blue;
+    @apply bg-white;
+}
+
+.ant-slider-mark-text {
+    @apply text-xs;
+}
+
+.ant-select-selection-item-content, .ant-select-selection-item-remove svg {
+    @apply text-xs;
+}

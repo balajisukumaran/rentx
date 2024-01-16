@@ -1,0 +1,29 @@
+Project Name,Package Name,Type Name,Method Name,Code Smell,Status
+main,com.rentx.businessservices,BooksService,getBookDetailsById,Long Statement,Fixed
+main,com.rentx.businessservices,ElectronicGadgetService,getElectronicGadgetsDetailsById,Long Statement,"Fixed, but still showing long statement false positive"
+main,com.rentx.businessservices,FurnitureService,getFurnitureDetailsById,Long Statement,Fixed
+main,com.rentx.businessservices,KitchenApplianceService,getKitchenApplianceDetailsById,Long Statement,"Fixed, but still showing long statement false positive"
+main,com.rentx.businessservices,ProductService,ProductService,Long Parameter List,Connot fix constructor dependency Injection
+main,com.rentx.businessservices,ProductService,addProduct,Missing default,false positve default statement is present
+main,com.rentx.businessservices,ProductService,updateProduct,Complex Method,Fixed
+main,com.rentx.businessservices,ProductService,updateProduct,Missing default,false positve default statement is present
+main,com.rentx.businessservices,ProductService,deleteProduct,Missing default,false positve default statement is present
+main,com.rentx.businessservices,PurchaseService,getPurchaseDetailsById,Long Statement,Fixed
+main,com.rentx.businessservices,UserProfileService,findUserById,Long Statement,Fixed
+main,com.rentx.businessservices,UserService,UserService,Long Parameter List,Fixed
+main,com.rentx.businessservices,UserService,login,Long Statement,Fixed
+main,com.rentx.config,JwtAuthFilter,doFilterInternal,Magic Number,Fixed
+main,com.rentx.config,SecurityConfig,securityFilterChain,Long Statement,Connot fix it middletier Http filter chain
+main,com.rentx.config,UserAuthenticationEntryPoint,commence,Long Statement,Fixed
+main,com.rentx.config,UserAuthenticationProvider,createToken,Long Statement,Connot fix JWT creation chain
+main,com.rentx.config,UserAuthenticationProvider,createToken,Magic Number,Fixed
+main,com.rentx.config,UserAuthenticationProvider,validateToken,Long Statement,Fixed
+main,com.rentx.config,WebConfig,corsFilter,Long Statement,"Fixed, but still showing long statement false positive"
+main,com.rentx.config,WebConfig,corsFilter,Magic Number,Fixed
+main,com.rentx.config,WebConfig,corsFilter,Magic Number,Fixed
+main,com.rentx.controller,AuthController,reset,Long Statement,"Fixed, but still showing long statement false positive"
+main,com.rentx.controller,AuthController,resetPassword,Long Statement,Connot fixed since this is of type record all the methods needs to be initialized
+main,com.rentx.dataaccess,ImageDAO,get,Long Statement,Refractored as much as we can but still tagged because of Java lambda function chain
+main,com.rentx.dataaccess,ProductDAO,getAllAvailableProduct,Long Statement,Connot fix since it is creating a named stored procedure
+main,com.rentx.entities,ElectronicGadget,ElectronicGadget,Long Parameter List,Fixed
+main,com.rentx.entities,KitchenAppliance,KitchenAppliance,Long Parameter List,Fixed

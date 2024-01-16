@@ -1,0 +1,49 @@
+.container {
+    @apply rounded-md;
+    @apply p-8;
+    @apply shadow-subtle;
+    @apply w-full;
+}
+
+.form {
+    @apply my-5;
+}
+
+.label {
+    @apply mb-2;
+    @apply block;
+    @apply font-light;
+    @apply text-sm;
+}
+
+.section {
+    @apply flex;
+    @apply gap-8;
+}
+
+.non-image {
+    @apply w-5/12;
+}
+
+.image {
+    @apply w-6/12;
+}
+
+.carousel {
+    height: fit-content;
+    @apply mt-4;
+
+    li {
+        @apply bg-black !important;
+    }
+
+    .slick-arrow {
+        @apply bg-black !important;
+    }
+}
+
+.carousel-image {
+    height: 456px;
+    object-fit: cover;
+    @apply cursor-pointer;
+}

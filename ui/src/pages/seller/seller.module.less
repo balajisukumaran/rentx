@@ -1,0 +1,41 @@
+.container {
+    @apply flex;
+    @apply shadow-subtle;
+    @apply rounded-md;
+    @apply justify-around;
+    @apply p-20;
+    @apply mt-10;
+}
+
+.image {
+    @apply w-1/2;
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+
+    img {
+        width: 326px;
+    }
+}
+
+.content {
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+
+    h6 {
+        @apply text-lg;
+        @apply font-bold;
+    }
+
+    ul {
+        @apply my-6;
+    }
+
+    li {
+        @apply font-light;
+        @apply text-sm;
+        @apply my-6;
+        @apply text-gray-500;
+    }
+}
