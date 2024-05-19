@@ -31,10 +31,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20.8.1
-          cache: 'npm'
-
-      - name: Install PNPM
-        run: npm install -g pnpm
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -48,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'  # Ensure this path is correct as per your build output directory
+          path: './dist'  # Make sure this matches the output directory specified in your build scripts
 
       - name: Deploy to GitHub Pages
         id: deployment
