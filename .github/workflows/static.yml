@@ -27,19 +27,19 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    
+    defaults:
+      run:
+        working-directory: ui
+        
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      - name: Change directory
-        run: cd ui
         
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
+      # - name: Set up Node
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 20
+      #     cache: 'npm'
       
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.0.0
@@ -55,7 +55,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload dist folder
           path: './build/'
       - name: Deploy to GitHub Pages
         id: deployment
