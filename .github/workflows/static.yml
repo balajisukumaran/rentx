@@ -35,10 +35,11 @@ jobs:
         with:
           node-version: 20.8.1
           cache: 'npm'
+          working-directory: rentx/ui
       - name: Install dependencies
         run: npm ci
-      - name: Change directory
-        run: cd ui
+      # - name: Change directory
+      #   run: cd ui
       - name: Check Node Version
         run: node -v
       - name: Install PNPM
